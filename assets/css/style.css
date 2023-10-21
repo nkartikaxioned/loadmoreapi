@@ -79,11 +79,12 @@ sub { bottom: -.25em; }
 }
 
 .cf:after { clear: both; }
-.cf { *zoom: 1; }
+.cf { zoom: 1; }
 
 /*for all*/
 body {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: sans-serif;
 }
 
@@ -103,14 +104,31 @@ li {
   width: 86%; 
   margin: 0 auto;
 }
+
+var{
+  --black:#000;
+  --yellow:#ffff00;
+  --light-grey:#888;
+  --grey:#808080;
+}
+
 /*=================================
   Header styling starts here
 =================================*/
 
+header { 
+  margin: 25px; 
+  background: -o-repeating-linear-gradient(45deg, #ffff00, transparent 100px); 
+  background: repeating-linear-gradient(45deg, #ffff00, transparent 100px);
+}
 
-
-
-
+header h1 {
+  padding: 10px;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: capitalize;
+}
 
 /*=================================
   Header styling ends here
@@ -120,30 +138,53 @@ li {
   main styling starts here
 =================================*/
 
+.img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 
+.card { 
+  width: 30%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 8px 2px #888;
+          box-shadow: 1px 1px 8px 2px #888;
+ }
 
+.card h2 {
+  padding: 10px 0;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 18px;
+  color: #646464;
+  text-shadow: 1px 1px black;
+}
 
+.button {
+  margin: 20px; 
+  text-align: center; 
+}
 
-
-
+.button a {
+  padding: 10px 25px;
+  border-radius: 20px;
+  background: -o-linear-gradient(45deg, yellow, transparent);
+  background: linear-gradient(45deg, yellow, transparent);
+  color: black;
+  text-transform: capitalize;
+  font-weight: 600;
+}
 
 /*=================================
   main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
 
 /*media query starts*/
 /*media query for 995px starts here*/
